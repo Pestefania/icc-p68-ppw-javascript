@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ececec;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+#app {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* TITULOS */
+h2 {
+  color: #003b7a;
+  margin-bottom: 15px;
+}
+
+.info-estudiante,
+.estadisticas {
+  margin-bottom: 25px;
+}
+
+.info-estudiante p,
+.estadisticas p {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+/* FILTROS */
+.filtros {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.btn-filtro {
+  padding: 12px 22px;
+  border: 1px solid #bbb;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-filtro:hover {
+  background: #ddd;
+}
+
+.btn-filtro-activo {
+  background: #003b7a;
+  color: white;
+  border-color: #003b7a;
+}
+
+/* CONTENEDOR */
+#contenedor-lista {
+  display: grid;
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
+}
+
+.card h3 {
+  color: #003b7a;
+  margin-bottom: 12px;
+  font-size: 28px;
+}
+
+.card p {
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+/* BADGES */
+.badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.badge {
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* CATEGORIA */
+.badge-categoria {
+  background: #dbeafe;
+  color: #0050c8;
+}
+
+/* PRIORIDAD */
+.prioridad-alta {
+  background: #ffd7d7;
+  color: #d80000;
+}
+
+.prioridad-media {
+  background: #fff1b8;
+  color: #9a7300;
+}
+
+.prioridad-baja {
+  background: #d7ffd9;
+  color: #00882d;
+}
+
+/* ESTADO */
+.estado-activo {
+  background: #d7ffe3;
+  color: #008c45;
+}
+
+.estado-inactivo {
+  background: #ececec;
+  color: #666;
+}
+
+/* BOTÓN */
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-eliminar {
+  background: #ff3b3b;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-eliminar:hover {
+  background: #d90000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .card h3 {
+    font-size: 22px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+
+  .filtros {
+    gap: 10px;
+  }
+
+  .btn-filtro {
+    width: 100%;
+  }
+
+}
