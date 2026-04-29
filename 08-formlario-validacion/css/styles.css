@@ -1,0 +1,187 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  min-height: 100vh;
+}
+
+/* ===== PAGE ===== */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  animation: fadeIn 1s ease;
+}
+
+/* ===== CARD ===== */
+.container {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 16px;
+  width: 380px;
+  margin-bottom: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  animation: slideUp 0.6s ease;
+}
+
+/* ===== TITLES ===== */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ===== INPUT GROUP ===== */
+.form-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* ===== FOCUS EFFECT ===== */
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 8px rgba(79,172,254,0.4);
+}
+
+/* ===== ERROR ===== */
+.error {
+  border: 2px solid #e74c3c !important;
+  animation: shake 0.3s;
+}
+
+/* ===== VALIDO ===== */
+.campo--valido {
+  border: 2px solid #2ecc71 !important; /* 🔥 esto faltaba */
+  background: #f0fff5;                  /* opcional visual */
+}
+
+/* ===== MENSAJES ===== */
+.error-mensaje {
+  font-size: 12px;
+  color: #e74c3c;
+  margin-top: 3px;
+  min-height: 14px;
+}
+
+/* ===== PASSWORD ===== */
+.password-strength {
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* ===== CHECKBOX ===== */
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox input {
+  width: auto;
+  margin-right: 8px;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* PRIMARY */
+.btn-submit {
+  background: linear-gradient(135deg, #4facfe, #007bff);
+  color: white;
+}
+
+.btn-submit:hover {
+  transform: scale(1.03);
+}
+
+/* DISABLED */
+.btn-submit:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* SECONDARY */
+.btn-secondary {
+  background: #ddd;
+}
+
+.btn-secondary:hover {
+  background: #bbb;
+}
+
+/* ===== MENSAJE ===== */
+.mensaje-estado {
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease;
+}
+
+.oculto {
+  display: none;
+}
+
+/* ===== RESULTADO ===== */
+.resultado-card {
+  animation: fadeIn 0.5s ease;
+}
+
+.resultado-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 6px;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(-5px) }
+  50% { transform: translateX(5px) }
+  75% { transform: translateX(-5px) }
+  100% { transform: translateX(0) }
+}
